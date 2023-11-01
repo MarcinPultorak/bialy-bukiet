@@ -1,3 +1,4 @@
+import Layout from "@/components/layout/Layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Crimson_Pro, Dynalight } from "next/font/google";
@@ -18,8 +19,10 @@ const dynalight = Dynalight({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${crimsonPro.variable} ${dynalight.variable} font-sans`}>
+    <Layout
+      className={`${crimsonPro.variable} ${dynalight.variable} font-sans`}
+    >
       <Component {...pageProps} />
-    </main>
+    </Layout>
   );
 }
