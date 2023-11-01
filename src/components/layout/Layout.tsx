@@ -7,7 +7,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <div className="flex min-h-screen w-full flex-1 flex-col bg-cover overflow-x-hidden">
         <Header />
-        <main className="flex flex-1 flex-col">{children}</main>
+        <section className="flex flex-1 flex-col">{children}</section>
         <Footer />
       </div>
     </>
