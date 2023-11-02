@@ -35,8 +35,8 @@ const ContactForm: FC<Props> = (props) => {
 
   return (
     <form noValidate onSubmit={handleSubmit(_submit)}>
-      <fieldset className="grid grid-cols-2 gap-5">
-        <div className="col-span-2">
+      <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="md:col-span-2">
           <FormInput
             {...register("name", {
               ...validateRequired(),
@@ -113,7 +113,7 @@ const ContactForm: FC<Props> = (props) => {
           />
         </div>
       </fieldset>
-      <div className="max-w-[360px] mx-auto mt-10">
+      <div className="md:max-w-[360px] mx-auto mt-10">
         <Button isSubmitting={isLoading} type={"submit"} title="Wyślij wiadomość">
           Wyślij wiadomość
         </Button>
