@@ -1,19 +1,23 @@
 import { FC } from "react";
 import Image from "next/image";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const AboutMe: FC = () => {
+  const isMobile = useIsMobile(1280);
+
   return (
-    <section className="relative mt-10">
-      <div className="w-[500px] h-[500px] bg-beige absolute top-0 right-0 -z-20"></div>
-      <div className="w-[500px] h-[500px] bg-beige absolute bottom-0 left-0 -z-20"></div>
-      <div className="max-w-screen-2xl mx-auto flex px-14 py-20 items-center mb-40">
-        <div className="relative h-[700px] w-[600px]">
-          <Image src={"/images/o-mnie.jpg"} alt="o-mnie" fill className="object-cover" />
+    <section className="relative mt-20 xl:mt-10">
+      {isMobile ? <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase text-center pt-10">Kilka słów o mnie </h2> : null}
+      <div className="w-1/2 aspect-square lg:w-[500px] lg:h-[500px] bg-beige absolute top-0 right-0 -z-20" />
+      <div className="w-1/2 aspect-square lg:w-[500px] lg:h-[500px] bg-beige absolute bottom-0 left-0 -z-20"></div>
+      <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row px-8 md:px-14 py-12 sm:py-20 items-center">
+        <div className="relative h-full w-full aspect-[4/5] max-w-[640px]">
+          <Image src={"/images/o-mnie.jpg"} alt="o-mnie" fill className="object-cover px-8 sm:px-12 md:px-0" />
         </div>
-        <div className="max-w-4xl flex flex-col items-center -ml-24 -mb-36">
-          <h2 className="text-5xl uppercase -ml-32">Kilka słów o mnie </h2>
+        <div className="max-w-4xl flex flex-col items-center lg:-ml-40 -mt-[40%] sm:-mt-80 md:-mt-[300px] lg:-mt-0 xl:-ml-24 lg:-mb-36">
+          {!isMobile ? <h2 className="text-5xl uppercase">Kilka słów o mnie </h2> : null}
           <div
-            className="px-14 py-20 max-w-4xl text-lg text-justify mt-24 z-20 "
+            className="px-7 sm:px-14 py-8 sm:py-12 lg:py-20 max-w-4xl text-sm md:text-base xl:text-lg text-justify lg:mt-24 z-20 "
             style={{
               boxShadow: "0px 4px 20px 0px rgba(0, 0, 0, 0.25)",
               background: "#fff",
