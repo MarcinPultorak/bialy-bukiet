@@ -11,6 +11,8 @@ const Contact: FC = () => {
 
   return (
     <section className="w-full bg-beige">
+      <h2 className="text-5xl italic text-black w-full text-center mt-20">Zapraszam do kontaktu !</h2>
+
       <div className="grid gap-4 p-4 grid-cols-2 border border-yellow-700 mx-auto my-20 max-w-screen-2xl">
         <div className="col-span-1 h-full w-full relative">
           <Image src={"/images/contact-image.png"} alt="Contact Image" fill objectFit="cover" />

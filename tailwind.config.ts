@@ -9,6 +9,7 @@ const config: Config = {
       white: colors.white,
       transparent: colors.transparent,
       red: colors.red,
+      black: colors.black,
       beige: {
         DEFAULT: "#F8F3EF",
       },
