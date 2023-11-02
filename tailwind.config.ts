@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
 
 const config: Config = {
   content: [
@@ -7,6 +8,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      yellow: colors.yellow,
+      white: "#ffffff",
+      beige: {
+        DEFAULT: "#F8F3EF",
+      },
+      beige2: {
+        DEFAULT: "#ECE5D3",
+      },
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-crimsonPro)"],
