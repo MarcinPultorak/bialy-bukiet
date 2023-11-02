@@ -2,14 +2,12 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 const clamp = (value: number) => Math.max(0, value);
 
-const isBetween = (value: number, floor: number, ceil: number) =>
-  value >= floor && value <= ceil;
+const isBetween = (value: number, floor: number, ceil: number) => value >= floor && value <= ceil;
 
 export const useScrollSpy = (ids: string[], offset: number = 0) => {
   const [activeId, setActiveId] = useState("");
 
-  const useIsomorphicLayoutEffect =
-    typeof window !== "undefined" ? useLayoutEffect : useEffect;
+  const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
   useIsomorphicLayoutEffect(() => {
     const listener = () => {

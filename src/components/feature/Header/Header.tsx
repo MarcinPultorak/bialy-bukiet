@@ -65,6 +65,15 @@ const Header: FC = () => {
         </div>
         <ul className="hidden lg:flex space-x-16 items-center uppercase">
           {leftIds.map((id) => (
+            <li key={id} className={cx("hover:text-yellow-700 cursor-pointer", id == activeId && "text-yellow-700")}>
+              <Link href={`#${id}`}>{id}</Link>
+            </li>
+          ))}
+          <li>
+            <Image src={"/images/logo-Bialy-Bukiet_sygnet.svg"} alt="logo-bialybukiet" width={isFollowing ? 36 : 48} height={isFollowing ? 36 : 48} />
+          </li>
+
+          {rightIds.map((id) => (
             <li
               key={id}
               className={cx(
