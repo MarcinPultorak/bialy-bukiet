@@ -85,7 +85,13 @@ const Header: FC = () => {
           </li>
 
           {rightIds.map((id) => (
-            <li key={id} className="hover:text-yellow-700">
+            <li
+              key={id}
+              className={cx(
+                "hover:text-yellow-700 cursor-pointer",
+                id == activeId && "text-yellow-700"
+              )}
+            >
               <Link href={`#${id}`}>{id}</Link>
             </li>
           ))}
