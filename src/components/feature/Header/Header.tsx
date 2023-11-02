@@ -27,11 +27,25 @@ const Header: FC = () => {
   }, [scrollY]);
 
   return (
-    <header className="w-full h-24">
+    <header
+      className={cx(
+        "w-full",
+        isFollowing ? "fixed bg-white h-12 z-50 py-10" : "h-24"
+      )}
+      style={{
+        boxShadow: "0px 4px 20px 0px rgba(0, 0, 0, 0.25)",
+      }}
+    >
       <div className="mx-auto flex max-w-screen-2xl w-full justify-center items-center h-full">
         <ul className="flex space-x-16 items-center uppercase">
           {leftIds.map((id) => (
-            <li key={id} className="hover:text-yellow-700">
+            <li
+              key={id}
+              className={cx(
+                "hover:text-yellow-700 cursor-pointer",
+                id == activeId && "text-yellow-700"
+              )}
+            >
               <Link href={`#${id}`}>{id}</Link>
             </li>
           ))}
@@ -39,8 +53,8 @@ const Header: FC = () => {
             <Image
               src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
               alt="logo-bialybukiet"
-              width={48}
-              height={48}
+              width={isFollowing ? 36 : 48}
+              height={isFollowing ? 36 : 48}
             />
           </li>
 
