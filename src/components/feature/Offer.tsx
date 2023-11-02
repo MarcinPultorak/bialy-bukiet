@@ -14,7 +14,7 @@ const Offer: FC = () => {
           }}
         >
           <div
-            className="w-full h-[500px] relative flex items-center justify-center"
+            className="w-full h-[200px] sm:h-[300px] md:h-[500px] relative flex items-center justify-center"
             style={{
               background:
                 "linear-gradient(270deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.25) 50.18%, rgba(0, 0, 0, 0.00) 100%)",
