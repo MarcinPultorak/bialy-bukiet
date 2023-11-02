@@ -6,7 +6,13 @@ const Offer: FC = () => {
   return (
     <>
       <section className="">
-        <Parallax strength={600} bgImage="/images/offer-bg2.png">
+        <Parallax
+          strength={600}
+          bgImage="/images/offer-bg2.png"
+          bgImageStyle={{
+            objectFit: "cover",
+          }}
+        >
           <div
             className="w-full h-[500px] relative flex items-center justify-center"
             style={{
@@ -20,17 +26,19 @@ const Offer: FC = () => {
             fill
             className="object-cover -z-10"
           /> */}
-            <h2 className="text-5xl text-white uppercase">Oferta</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white uppercase">
+              Oferta
+            </h2>
           </div>
         </Parallax>
         <div className="max-w-screen-2xl mx-auto pb-20">
-          <h2 className="text-2xl max-w-4xl mx-auto text-center mt-20">
+          <h2 className="sd:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto text-center mt-20 px-5">
             Każda Para Młoda ma swoje potrzeby i swoją wizję wesela. I każda z
             Par ma się tego dnia czuć wyjątkowo, dlatego każda oferta jest
             przygotowywana indywidualnie.
           </h2>
-          <div className="w-full px-10 grid grid-cols-3 mt-20">
-            <div className="px-10">
+          <div className="w-full px-5 sm:px-10 grid md:grid-cols-1 lg:grid-cols-3 mt-20">
+            <div className="sm:px-20 md:px-32 lg:px-10">
               <div
                 className="h-80 relative"
                 style={{
@@ -45,10 +53,10 @@ const Offer: FC = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-yellow-700 text-2xl tracking-widest text-center mt-4">
+              <h3 className="text-yellow-700 sm:text-lg md:text-xl lg:text-2xl tracking-widest text-center mt-4">
                 Kompleksowa organizacja dnia ślubu
               </h3>
-              <div className="text-base text-center px-4 mt-4">
+              <div className="text-xs sm:text-sm lg:text-base text-center px-4 mt-4">
                 <p>
                   Może macie mało czasu na organizację, może przebywacie za
                   granicą ale ślub ma się odbyć w Polsce, może zwyczajnie nie
@@ -64,7 +72,7 @@ const Offer: FC = () => {
                 <p className="mt-4 text-yellow-700">Więcej szczegółów...</p>
               </div>
             </div>
-            <div className="px-10">
+            <div className="mt-10 lg:mt-0 sm:px-20 md:px-32 lg:px-10">
               <div
                 className="h-80 relative"
                 style={{
@@ -79,10 +87,10 @@ const Offer: FC = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-yellow-700 text-2xl tracking-widest text-center mt-4">
+              <h3 className="text-yellow-700 sm:text-lg md:text-xl lg:text-2xl tracking-widest text-center mt-4">
                 Częściowa organizacja dnia ślubu
               </h3>
-              <div className="text-base text-center px-4 mt-4">
+              <div className="text-xs sm:text-sm lg:text-base text-center px-4 mt-4">
                 <p>
                   Tutaj przychodzę do Was z pomocą, jeżeli nie możecie sobie
                   poradzić z jaką częścią organizacji. Jeżeli utknęliście na
@@ -92,8 +100,8 @@ const Offer: FC = () => {
                   do czego zachęcam. Zawsze jesteście mile widziani
                 </p>
               </div>
-            </div>{" "}
-            <div className="px-10">
+            </div>
+            <div className="mt-10 lg:mt-0 sm:px-20 md:px-32 lg:px-10">
               <div
                 className="h-80 relative"
                 style={{
@@ -108,10 +116,10 @@ const Offer: FC = () => {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-yellow-700 text-2xl tracking-widest text-center mt-4">
+              <h3 className="text-yellow-700 sm:text-lg md:text-xl lg:text-2xl tracking-widest text-center mt-4">
                 Koordynacja dnia ślubu
               </h3>
-              <div className="text-base text-center px-4 mt-4">
+              <div className="text-xs sm:text-sm lg:text-base text-center px-4 mt-4">
                 <p>
                   W przypadku kiedy macie już zorganizowany cały ślub i wesele,
                   jednak zależy Wam aby ktoś nad Wami czuwał tego dnia, nie

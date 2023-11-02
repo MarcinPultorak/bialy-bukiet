@@ -27,8 +27,10 @@ const Gallery: FC = () => {
   return (
     <>
       <section className="max-w-screen-2xl mx-auto w-full h-full py-20">
-        <h2 className="text-5xl uppercase text-center">Galeria zdjęć</h2>
-        <div className="grid grid-cols-4 gap-3 mt-20 px-20">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase text-center">
+          Galeria zdjęć
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-20 px-10 lg:px-20">
           {photos.map((photo, i) => {
             return (
               <div className="w-full h-80 relative" key={i}>
