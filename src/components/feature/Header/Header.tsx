@@ -12,7 +12,7 @@ const Header: FC = () => {
   const rightIds: string[] = ["Dekoracje", "Galeria", "Kontakt"];
 
   const { scrollY } = useScroll();
-  const activeId = useScrollSpy(leftIds.concat(rightIds), 81);
+  const activeId = useScrollSpy(leftIds.concat(rightIds), 80);
 
   useEffect(() => {
     const updateHeader = () => {
@@ -29,8 +29,8 @@ const Header: FC = () => {
   return (
     <header
       className={cx(
-        "w-full",
-        isFollowing ? "fixed bg-white h-12 z-50 py-10" : "h-24"
+        "w-full z-50",
+        isFollowing ? "fixed bg-white h-12 py-10" : "h-24"
       )}
       style={{
         boxShadow: "0px 4px 20px 0px rgba(0, 0, 0, 0.25)",
