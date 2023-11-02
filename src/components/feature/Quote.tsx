@@ -1,21 +1,23 @@
 import { FC } from "react";
 import Image from "next/image";
+import { Parallax } from "react-parallax";
 
 const Quote: FC = () => {
   return (
-    <>
+    <Parallax strength={600} bgImage="/images/cytat.jpg">
       <section
         className="w-full h-screen relative"
         style={{
           background: "rgba(0, 0, 0, 0.50)",
         }}
       >
-        <Image
-          src={"/images/cytat.jpg"}
-          alt="cytat"
-          fill
-          className="object-cover -z-10"
-        />
+        {/* <Image
+        src={"/images/cytat.jpg"}
+        alt="cytat"
+        fill
+        className="object-cover -z-10"
+      /> */}
+
         <div className="max-w-screen-2xl mx-auto h-full w-full z-20 text-white text-4xl grid grid-cols-2">
           <div className="flex flex-col justify-center">
             <p className="italic tracking-widest px-10">
@@ -33,7 +35,7 @@ const Quote: FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </Parallax>
   );
 };
 
