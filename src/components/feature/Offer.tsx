@@ -1,25 +1,28 @@
 import { FC } from "react";
 import Image from "next/image";
+import { Parallax } from "react-parallax";
 
 const Offer: FC = () => {
   return (
     <>
       <section className="">
-        <div
-          className="w-full h-[500px] relative flex items-center justify-center"
-          style={{
-            background:
-              "linear-gradient(270deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.25) 50.18%, rgba(0, 0, 0, 0.00) 100%)",
-          }}
-        >
-          <Image
-            src={"/images/offer-bg.jpg"}
+        <Parallax strength={600} bgImage="/images/offer-bg2.png">
+          <div
+            className="w-full h-[500px] relative flex items-center justify-center"
+            style={{
+              background:
+                "linear-gradient(270deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.25) 50.18%, rgba(0, 0, 0, 0.00) 100%)",
+            }}
+          >
+            {/* <Image
+            src={"/images/offer-bg2.png"}
             alt="oferta-tło"
             fill
             className="object-cover -z-10"
-          />
-          <h2 className="text-5xl text-white uppercase">Oferta</h2>
-        </div>
+          /> */}
+            <h2 className="text-5xl text-white uppercase">Oferta</h2>
+          </div>
+        </Parallax>
         <div className="max-w-screen-2xl mx-auto pb-20">
           <h2 className="text-2xl max-w-4xl mx-auto text-center mt-20">
             Każda Para Młoda ma swoje potrzeby i swoją wizję wesela. I każda z
