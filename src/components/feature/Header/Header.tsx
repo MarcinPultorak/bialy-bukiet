@@ -31,34 +31,18 @@ const Header: FC = () => {
 
   return (
     <header
-      className={cx(
-        "w-full z-50",
-        isFollowing ? "fixed bg-white  lg:h-12 py-5 lg:py-10" : "h-20 lg:h-24"
-      )}
+      className={cx("w-full z-50", isFollowing ? "fixed bg-white  lg:h-12 py-5 lg:py-10" : "h-20 lg:h-24")}
       style={{
         boxShadow: "0px 4px 20px 0px rgba(0, 0, 0, 0.25)",
       }}
     >
-      {isOpened && (
-        <HeaderMobile
-          closeMenu={() => setIsOpened(false)}
-          isFollowing={isFollowing}
-        />
-      )}
+      {isOpened && <HeaderMobile closeMenu={() => setIsOpened(false)} isFollowing={isFollowing} />}
       <div className="mx-auto flex max-w-screen-2xl w-full justify-center items-center h-full">
         <div className="flex justify-between h-full w-full px-5 sm:px-10 lg:hidden">
-          <Image
-            src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
-            alt="logo-bialybukiet"
-            width={32}
-            height={32}
-          />
+          <Image src={"/images/logo-Bialy-Bukiet_sygnet.svg"} alt="logo-bialybukiet" width={32} height={32} />
           <div className="flex items-center">
             <p className="uppercase mr-2 font-bold">Menu</p>
-            <button
-              onClick={() => setIsOpened(!isOpened)}
-              title="hamburger-menu"
-            >
+            <button onClick={() => setIsOpened(!isOpened)} title="hamburger-menu">
               <Bars3Icon className="w-8 h-8" />
             </button>
           </div>
@@ -74,33 +58,7 @@ const Header: FC = () => {
           </li>
 
           {rightIds.map((id) => (
-            <li
-              key={id}
-              className={cx(
-                "hover:text-yellow-700 cursor-pointer",
-                id == activeId && "text-yellow-700"
-              )}
-            >
-              <Link href={`#${id}`}>{id}</Link>
-            </li>
-          ))}
-          <li>
-            <Image
-              src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
-              alt="logo-bialybukiet"
-              width={isFollowing ? 36 : 48}
-              height={isFollowing ? 36 : 48}
-            />
-          </li>
-
-          {rightIds.map((id) => (
-            <li
-              key={id}
-              className={cx(
-                "hover:text-yellow-700 cursor-pointer",
-                id == activeId && "text-yellow-700"
-              )}
-            >
+            <li key={id} className={cx("hover:text-yellow-700 cursor-pointer", id == activeId && "text-yellow-700")}>
               <Link href={`#${id}`}>{id}</Link>
             </li>
           ))}
