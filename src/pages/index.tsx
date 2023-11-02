@@ -1,4 +1,5 @@
 import AboutMe from "@/components/feature/AboutMe";
+import Contact from "@/components/feature/Contact";
 import Courses from "@/components/feature/Courses";
 import Decor from "@/components/feature/Decor";
 import Gallery from "@/components/feature/Gallery";
@@ -18,6 +19,7 @@ export default function Home() {
       <Decor />
       <Gallery />
       <Quote />
+      <Contact />
     </>
   );
 }
