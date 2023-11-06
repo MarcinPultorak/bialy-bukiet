@@ -9,6 +9,7 @@ const config: Config = {
       white: colors.white,
       transparent: colors.transparent,
       red: colors.red,
+      slate: colors.slate,
       black: colors.black,
       beige: {
         DEFAULT: "#F8F3EF",
@@ -21,6 +22,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-crimsonPro)"],
         mono: ["var(--font-dynalight)"],
+        serif: ["var(--font-playfair)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
