@@ -42,12 +42,6 @@ const Collaboration: FC = () => {
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4 md:gap-12 xl:gap-16 mt-12 lg:mt-20">
           {data.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
-              <Image
-                src={"/images/bukiet2.png"}
-                width={48}
-                height={48}
-                alt="bukiet-icon"
-              />
               <h2 className="uppercase mt-3 text-yellow-700 text-base md:text-xl tracking-widest">
                 {item.label}
               </h2>

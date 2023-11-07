@@ -14,14 +14,14 @@ const Button: FC<ButtonHTMLAttributes<HTMLButtonElement> & Props> = ({
   const variants: Record<string, string> = {
     blank: "",
     primary: "bg-yellow-700 text-white hover:bg-yellow-800 px-5",
-    beige: "bg-beige2 text-slate-600 hover:bg-beige px-5",
+    beige: "bg-beige3 hover:bg-beige px-5",
   };
 
   return (
     <button
       {...props}
       className={cx(
-        "relative flex h-12 w-full items-center justify-center whitespace-nowrap uppercase transition disabled:bg-opacity-50 disabled:cursor-not-allowed",
+        "relative flex h-12 w-full items-center justify-center whitespace-nowrap uppercase transition disabled:bg-opacity-50 disabled:cursor-not-allowed text-sm sm:text-base",
         props.className,
         variants[props.variant ?? "primary"]
       )}
