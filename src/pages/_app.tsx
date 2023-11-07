@@ -26,7 +26,9 @@ const playfair = Playfair_Display({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout className={`${crimsonPro.variable} ${dynalight.variable} ${playfair.variable} font-sans`}>
+    <Layout
+      className={`${crimsonPro.variable} ${dynalight.variable} ${playfair.variable} font-serif`}
+    >
       <Component {...pageProps} />
     </Layout>
   );

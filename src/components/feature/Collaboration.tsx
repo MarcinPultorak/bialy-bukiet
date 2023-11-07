@@ -30,20 +30,30 @@ const Collaboration: FC = () => {
       <div className="py-20 max-w-screen-2xl mx-auto px-10">
         <div className="flex items-center sm:space-x-8 w-full xl:px-20">
           <div className="hidden sm:block min-w-[20px] h-0.5 bg-yellow-700 w-full" />
-          <h2 className="text-center text-xl md:text-2xl xl:text-3xl space-y-2 font-serif tracking-wider w-full min-w-fit">
+          <h2 className="text-center text-xl md:text-2xl xl:text-3xl space-y-2 tracking-wider w-full min-w-fit">
             <p>
-              Współpracując z <span className="text-yellow-700">Białym Bukietem</span>
+              Współpracując z{" "}
+              <span className="text-yellow-700">Białym Bukietem</span>
             </p>
             <p>zyskujecie przede wszystkim</p>
           </h2>
           <div className="hidden sm:block min-w-[20px] h-0.5 bg-yellow-700 w-full" />
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4 md:gap-12 xl:gap-16 mt-12 lg:mt-20">
-          {data.map((item) => (
-            <div className="flex flex-col items-center font-serif">
-              <Image src={"/images/bukiet.png"} width={48} height={48} alt="bukiet-icon" />
-              <h2 className="uppercase mt-3 text-yellow-700 text-base md:text-xl tracking-widest">{item.label}</h2>
-              <p className="mt-6 text-justify text-slate-600 text-sm md:text-base leading-relaxed">{item.description}</p>
+          {data.map((item, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <Image
+                src={"/images/bukiet2.png"}
+                width={48}
+                height={48}
+                alt="bukiet-icon"
+              />
+              <h2 className="uppercase mt-3 text-yellow-700 text-base md:text-xl tracking-widest">
+                {item.label}
+              </h2>
+              <p className="mt-6 text-justify text-slate-600 text-sm md:text-base leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

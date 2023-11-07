@@ -12,7 +12,7 @@ const Quote: FC = () => {
       }}
     >
       <section
-        className="w-full h-[600px] relative"
+        className="w-full h-[650px] relative"
         style={{
           background: "rgba(0, 0, 0, 0.50)",
         }}

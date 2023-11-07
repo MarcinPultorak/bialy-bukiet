@@ -6,8 +6,31 @@ const Footer: FC = () => {
   return (
     <footer className="">
       <div className="border-y border-yellow-700 mt-24 px-5">
-        <div className="max-w-screen-2xl mx-auto w-full h-full py-20 flex flex-col xl:flex-row items-center justify-between">
-          <div className="relative w-full xl:w-[400px] h-[300px]">
+        <div className="max-w-screen-2xl mx-auto w-full h-full py-20 px-5 flex flex-row items-center justify-between">
+          <div className="flex flex-col gap-y-4 tracking-widest">
+            <div>
+              <p>Magda Grajek-Antonowicz</p>
+            </div>
+            <div className="flex gap-x-2">
+              <Image
+                src={"/images/phone.svg"}
+                alt="phone-icon"
+                width={24}
+                height={24}
+              />
+              <p>506 483 167</p>
+            </div>
+            <div className="flex gap-x-2">
+              <Image
+                src={"/images/mail.svg"}
+                alt="mail-icon"
+                width={24}
+                height={24}
+              />
+              <p>bialybukietweddingplanner@gmail.com</p>
+            </div>
+          </div>
+          <div className="relative w-full xl:w-[300px] h-[230px]">
             <Image
               src={"/images/logo-Bialy-Bukiet.svg"}
               alt="logo"
@@ -15,33 +38,32 @@ const Footer: FC = () => {
               className="object-contain"
             />
           </div>
-          <div className="sd:text-lg md:text-xl lg:text-2xl tracking-widest text-center mt-6 xl:mt-0">
-            <p>Magda Grajek-Antonowicz</p>
-            <p>506 483 167</p>
-            <p>bialybukietweddingplanner@gmail.com</p>
-          </div>
-          <div className="flex gap-x-12 px-16 mt-10 xl:mt-0">
+          <div className="flex flex-col gap-y-4 items-end">
             <Link
               href={"https://www.facebook.com/bialybukietweddingplanner/"}
               target="_blank"
+              className="flex gap-x-2 tracking-widest"
             >
+              <p>Facebook</p>
               <Image
                 src={"/images/facebook.svg"}
                 alt="facebook"
-                width={60}
-                height={60}
+                width={24}
+                height={24}
                 className="object-contain"
               />
             </Link>
             <Link
               href={"https://www.instagram.com/bialybukietweddingplanner/"}
               target="_blank"
+              className="flex gap-x-2 tracking-widest"
             >
+              <p>Instagram</p>
               <Image
                 src={"/images/instagram.svg"}
                 alt="instagram"
-                width={60}
-                height={60}
+                width={24}
+                height={24}
                 className="object-contain"
               />
             </Link>
