@@ -12,11 +12,11 @@ const Gallery: FC = () => {
   const [open, setOpen] = useState(false);
 
   const photos: String[] = [
-    "(39).jpg",
-    "(52).jpg",
-    "(68).jpg",
-    "(84).jpg",
-    "(93).jpg",
+    "Zdjecie1.jpg",
+    "Zdjecie2.jpg",
+    "Zdjecie3.jpg",
+    "Zdjecie4.jpg",
+    "Zdjecie5.jpg",
     "AgataPatryk (286).jpg",
     "AgataPatryk (800).jpg",
     "AgataPatryk (866).jpg",
@@ -39,11 +39,11 @@ const Gallery: FC = () => {
   ];
 
   const photosLigtbox = [
-    { src: "/images/gallery/(39).jpg" },
-    { src: "/images/gallery/(52).jpg" },
-    { src: "/images/gallery/(68).jpg" },
-    { src: "/images/gallery/(84).jpg" },
-    { src: "/images/gallery/(93).jpg" },
+    { src: "/images/gallery/Zdjecie1.jpg" },
+    { src: "/images/gallery/Zdjecie2.jpg" },
+    { src: "/images/gallery/Zdjecie3.jpg" },
+    { src: "/images/gallery/Zdjecie4.jpg" },
+    { src: "/images/gallery/Zdjecie5.jpg" },
     { src: "/images/gallery/AgataPatryk (286).jpg" },
     { src: "/images/gallery/AgataPatryk (800).jpg" },
     { src: "/images/gallery/AgataPatryk (866).jpg" },
