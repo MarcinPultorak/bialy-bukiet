@@ -7,13 +7,13 @@ const Welcome: FC = () => {
       <div className="flex flex-col items-center max-w-3xl text-center font-serif">
         <h1 className="text-3xl sm:text-4xl xl:text-5xl space-y-4 tracking-wider">
           <div>Witajcie!</div>
-          <div>Cieszę się że tu jesteście!</div>
+          <div>Cieszę się, że tu jesteście!</div>
         </h1>
         <p className="text-base sm:text-xl xl:text-2xl mt-12 xl:mt-20 text-slate-600">
-          Wsparcie, bezpieczeństwo, zaufanie, pozytywna energia, tego możesz tutaj doświadczyć. Jestem po to abyście mieli kogoś kto Was będzie wspierał na
+          Wsparcie, bezpieczeństwo, zaufanie, pozytywna energia - tego możesz tutaj doświadczyć. Jestem po to, abyście mieli kogoś kto Was będzie wspierał na
           całym etapie organizacji, od początku do końca.
         </p>
-        <p className="text-base mt-4 sm:text-xl xl:text-2xl text-slate-600">Dajcie sobie pomóc aby ten dzień był niezapomniany!</p>
+        <p className="text-base mt-4 sm:text-xl xl:text-2xl text-slate-600">Dajcie sobie pomóc, aby ten dzień był niezapomniany!</p>
         <span className="font-mono text-2xl sm:text-4xl mt-10 self-end">Magda Grajek-Antonowicz</span>
       </div>
       <div
