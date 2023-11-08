@@ -1,7 +1,8 @@
+import Contact from "@/components/feature/Contact";
 import { FC } from "react";
 
 const ContactPage: FC = () => {
-  return <></>;
+  return <Contact />;
 };
 
 export default ContactPage;
