@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-// import Contact from "./Contact";
+import Contact from "./Contact";
 
 const Offer: FC = () => {
   return (
@@ -237,7 +237,7 @@ const Offer: FC = () => {
           </div>
         </div>
       </div>
-      {/* <Contact /> */}
+      <Contact />
     </section>
   );
 };

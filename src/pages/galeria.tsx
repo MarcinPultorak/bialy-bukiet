@@ -1,7 +1,8 @@
+import Gallery from "@/components/feature/Gallery";
 import { FC } from "react";
 
 const GalleryPage: FC = () => {
-  return <></>;
+  return <Gallery />;
 };
 
 export default GalleryPage;
