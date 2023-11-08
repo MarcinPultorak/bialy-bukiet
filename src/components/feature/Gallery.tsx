@@ -78,15 +78,15 @@ const Gallery: FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-10 md:mt-20">
           {photos.map((photo, i) => {
             return (
-              <div className="w-full h-80 relative" key={i}>
-                <Image
-                  src={`/images/gallery/${photo}`}
-                  alt={`${photo}`}
-                  fill
-                  className="object-cover cursor-pointer"
-                  onClick={() => setOpen(true)}
-                />
-              </div>
+              <Image
+                key={i}
+                src={`/images/gallery/${photo}`}
+                alt={`${photo}`}
+                width={800}
+                height={800}
+                className="aspect-square object-cover cursor-pointer"
+                onClick={() => setOpen(true)}
+              />
             );
           })}
         </div>
