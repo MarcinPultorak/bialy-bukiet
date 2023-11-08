@@ -1,38 +1,21 @@
-import AboutMe from "@/components/feature/AboutMe";
-import Contact from "@/components/feature/Contact";
-import Courses from "@/components/feature/Courses";
-import Decor from "@/components/feature/Decor";
-import Gallery from "@/components/feature/Gallery";
+import Collaboration from "@/components/feature/Collaboration";
 import Hero from "@/components/feature/Hero";
-import Offer from "@/components/feature/Offer";
+import OfferTile from "@/components/feature/OfferTile";
 import Quote from "@/components/feature/Quote";
+import Testimonials from "@/components/feature/Testimonials";
 import Welcome from "@/components/feature/Welcome";
-import SectionWrapper from "@/components/ui/SectionWrapper";
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
-      <SectionWrapper id="Home">
-        <Hero />
-        <Welcome />
-      </SectionWrapper>
-      <SectionWrapper id="O mnie">
-        <AboutMe />
-        <Courses />
-      </SectionWrapper>
-      <SectionWrapper id="Oferta">
-        <Offer />
-      </SectionWrapper>
-      <SectionWrapper id="Dekoracje">
-        <Decor />
-      </SectionWrapper>
-      <SectionWrapper id="Galeria">
-        <Gallery />
-        <Quote />
-      </SectionWrapper>
-      <SectionWrapper id="Kontakt">
-        <Contact />
-      </SectionWrapper>
+      <Hero />
+      <Welcome />
+      <Collaboration />
+      <OfferTile />
+      <Testimonials />
+      <Quote />
     </>
   );
-}
+};
+
+export default HomePage;

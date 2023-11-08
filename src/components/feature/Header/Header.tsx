@@ -2,20 +2,39 @@ import { FC, useState, useEffect } from "react";
 import { useScroll } from "framer-motion";
 import cx from "classnames";
 import Link from "next/link";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
 import Image from "next/image";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import HeaderMobile from "./HeaderMobile";
+import { useRouter } from "next/router";
 
 const Header: FC = () => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [isFollowing, setIsFollowing] = useState<boolean>(false);
 
-  const leftIds: string[] = ["Home", "O mnie", "Oferta"];
-  const rightIds: string[] = ["Dekoracje", "Galeria", "Kontakt"];
+  const router = useRouter();
+
+  const leftIds: MenuLink[] = [
+    {
+      title: "O mnie",
+      href: "/o-mnie",
+    },
+    {
+      title: "Oferta",
+      href: "/oferta",
+    },
+  ];
+  const rightIds: MenuLink[] = [
+    {
+      title: "Galeria",
+      href: "/galeria",
+    },
+    {
+      title: "Kontakt",
+      href: "/kontakt",
+    },
+  ];
 
   const { scrollY } = useScroll();
-  const activeId = useScrollSpy(leftIds.concat(rightIds), 80);
 
   useEffect(() => {
     const updateHeader = () => {
@@ -33,7 +52,7 @@ const Header: FC = () => {
     <header
       className={cx(
         "w-full z-50",
-        isFollowing ? "fixed bg-white  lg:h-12 py-5 lg:py-10" : "h-20 lg:h-24"
+        isFollowing ? "fixed bg-white lg:h-12 py-5 lg:py-10" : "h-20 lg:h-24"
       )}
       style={{
         boxShadow: "0px 4px 20px 0px rgba(0, 0, 0, 0.25)",
@@ -47,7 +66,7 @@ const Header: FC = () => {
       )}
       <div className="mx-auto flex max-w-screen-2xl w-full justify-center items-center h-full">
         <div className="flex justify-between h-full w-full px-5 sm:px-10 lg:hidden">
-          <Link href={"#Home"} className="flex">
+          <Link href={"/"} className="flex">
             <Image
               src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
               alt="logo-bialybukiet"
@@ -65,19 +84,20 @@ const Header: FC = () => {
             </button>
           </div>
         </div>
-        <ul className="hidden lg:flex space-x-16 items-center uppercase">
-          {leftIds.map((id) => (
+        <ul className="hidden lg:flex space-x-16 items-center font-sans uppercase">
+          {leftIds.map((item) => (
             <li
-              key={id}
+              key={item.title}
               className={cx(
-                "hover:text-yellow-700 cursor-pointer",
-                id == activeId && "text-yellow-700"
+                "hover:text-yellow-700 cursor-pointer hover:underline hover:underline-offset-4",
+                item.href == router.asPath &&
+                  "text-yellow-700 underline underline-offset-4"
               )}
             >
-              <Link href={`#${id}`}>{id}</Link>
+              <Link href={item.href}>{item.title}</Link>
             </li>
           ))}
-          <li>
+          <li onClick={() => router.push("/")} className="cursor-pointer">
             <Image
               src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
               alt="logo-bialybukiet"
@@ -86,15 +106,16 @@ const Header: FC = () => {
             />
           </li>
 
-          {rightIds.map((id) => (
+          {rightIds.map((item) => (
             <li
-              key={id}
+              key={item.title}
               className={cx(
-                "hover:text-yellow-700 cursor-pointer",
-                id == activeId && "text-yellow-700"
+                "hover:text-yellow-700 cursor-pointer hover:underline hover:underline-offset-4",
+                item.href == router.asPath &&
+                  "text-yellow-700 underline underline-offset-4"
               )}
             >
-              <Link href={`#${id}`}>{id}</Link>
+              <Link href={item.href}>{item.title}</Link>
             </li>
           ))}
         </ul>
@@ -104,3 +125,8 @@ const Header: FC = () => {
 };
 
 export default Header;
+
+export type MenuLink = {
+  title: string;
+  href: string;
+};

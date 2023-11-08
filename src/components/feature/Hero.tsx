@@ -20,8 +20,8 @@ const Hero: FC = () => {
         <Image
           src={"/images/logo-hero.png"}
           alt="logo-hero"
-          width={1100}
-          height={800}
+          width={700}
+          height={600}
         />
       </div>
     </section>

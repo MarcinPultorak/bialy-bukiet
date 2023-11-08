@@ -3,6 +3,8 @@ import Link from "next/link";
 import cx from "classnames";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { MenuLink } from "./Header";
+import { useRouter } from "next/router";
 
 type Props = {
   closeMenu: () => void;
@@ -10,20 +12,32 @@ type Props = {
 };
 
 const HeaderMobile: FC<Props> = ({ closeMenu, isFollowing }) => {
-  const ids: string[] = [
-    "Home",
-    "O mnie",
-    "Oferta",
-    "Dekoracje",
-    "Galeria",
-    "Kontakt",
+  const router = useRouter();
+
+  const ids: MenuLink[] = [
+    {
+      title: "O mnie",
+      href: "/o-mnie",
+    },
+    {
+      title: "Oferta",
+      href: "/oferta",
+    },
+    {
+      title: "Galeria",
+      href: "/galeria",
+    },
+    {
+      title: "Kontakt",
+      href: "/kontakt",
+    },
   ];
 
   return (
     <div className="fixed top-0 left-0 h-screen w-full px-10 py-20 z-50 bg-beige">
       <div
         className={cx(
-          "absolute  right-0 sm:right-5 px-5",
+          "absolute right-0 sm:right-5 px-5",
           isFollowing ? "top-6" : "top-6"
         )}
       >
@@ -32,23 +46,29 @@ const HeaderMobile: FC<Props> = ({ closeMenu, isFollowing }) => {
         </button>
       </div>
       <div className="mx-auto">
-        <div className="flex justify-center">
-          <Image
-            src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
-            alt="logo-bialybukiet"
-            width={36}
-            height={36}
-          />
-        </div>
+        <Link href={"/"} onClick={() => closeMenu()}>
+          <div className="flex justify-center">
+            <Image
+              src={"/images/logo-Bialy-Bukiet_sygnet.svg"}
+              alt="logo-bialybukiet"
+              width={36}
+              height={36}
+            />
+          </div>
+        </Link>
         <div className="flex justify-center"></div>
-        <ul className="flex flex-col space-y-10 items-center mt-12">
-          {ids.map((id) => (
+        <ul className="flex flex-col space-y-10 items-center font-sans mt-12">
+          {ids.map((item) => (
             <li
-              key={id}
-              className="cursor-pointer border-b border-b-yellow-700 hover:text-yellow-700"
+              key={item.title}
+              className={cx(
+                "cursor-pointer hover:text-yellow-700 hover:underline hover:underline-offset-4",
+                item.href == router.asPath &&
+                  "underline underline-offset-4 text-yellow-700"
+              )}
             >
-              <Link href={`#${id}`} onClick={() => closeMenu()}>
-                {id}
+              <Link href={item.href} onClick={() => closeMenu()}>
+                {item.title}
               </Link>
             </li>
           ))}
