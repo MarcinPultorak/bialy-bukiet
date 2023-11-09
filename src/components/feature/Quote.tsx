@@ -1,7 +1,13 @@
 import { FC } from "react";
 import Image from "next/image";
+import isMobile from "is-mobile";
 
 const Quote: FC = () => {
+  const isIOS = isMobile({
+    tablet: true,
+    featureDetect: true,
+    ua: navigator.userAgent,
+  });
   return (
     <section
       className="w-full h-[650px] relative"
@@ -9,7 +15,7 @@ const Quote: FC = () => {
         background: "rgba(0, 0, 0, 0.50)",
         backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: isIOS ? "scroll" : "fixed",
         backgroundSize: "cover",
       }}
     >
