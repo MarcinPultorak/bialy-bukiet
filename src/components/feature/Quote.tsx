@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import isMobile from "is-mobile";
 
 const Quote: FC = () => {
@@ -32,6 +31,7 @@ const Quote: FC = () => {
           <p className="self-center lg:self-end tracking-widest">
             Nie przegap swojego dnia...
             <span className="text-transparent">{isIOS ? " " : "  "}</span>
+            {/* bez tego spana psuje sie na iOs (nie wiadomo dlaczego....) */}
           </p>
         </div>
       </div>
