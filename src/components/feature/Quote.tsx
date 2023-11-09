@@ -14,7 +14,7 @@ const Quote: FC = () => {
         background: "rgba(0, 0, 0, 0.50)",
         backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
-        backgroundAttachment: isIOS ? "scroll" : "fixed",
+        backgroundAttachment: isIOS ? "" : "fixed",
         backgroundSize: "cover",
       }}
     >
@@ -31,7 +31,7 @@ const Quote: FC = () => {
         <div className="flex flex-col justify-center">
           <p className="self-center lg:self-end tracking-widest">
             Nie przegap swojego dnia...
-            <span>{isIOS ? "true" : "false"}</span>
+            <span>{isIOS ? "." : "."}</span>
           </p>
         </div>
       </div>
