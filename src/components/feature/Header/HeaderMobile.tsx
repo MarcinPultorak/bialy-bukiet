@@ -57,7 +57,7 @@ const HeaderMobile: FC<Props> = ({ closeMenu, isFollowing }) => {
           </div>
         </Link>
         <div className="flex justify-center"></div>
-        <ul className="flex flex-col space-y-10 items-center font-sans mt-12">
+        <ul className="flex flex-col space-y-10 items-center font-sans text-lg uppercase mt-12">
           {ids.map((item) => (
             <li
               key={item.title}

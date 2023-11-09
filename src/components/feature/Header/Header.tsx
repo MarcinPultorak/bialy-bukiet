@@ -74,15 +74,9 @@ const Header: FC = () => {
               height={32}
             />
           </Link>
-          <div className="flex items-center">
-            <p className="uppercase mr-2 font-bold">Menu</p>
-            <button
-              onClick={() => setIsOpened(!isOpened)}
-              title="hamburger-menu"
-            >
-              <Bars3Icon className="w-8 h-8" />
-            </button>
-          </div>
+          <button onClick={() => setIsOpened(!isOpened)} title="hamburger-menu">
+            <Bars3Icon className="w-8 h-8" />
+          </button>
         </div>
         <ul className="hidden lg:flex space-x-16 items-center font-sans uppercase">
           {leftIds.map((item) => (
