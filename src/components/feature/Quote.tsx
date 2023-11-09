@@ -6,7 +6,7 @@ const Quote: FC = () => {
   const isIOS =
     typeof window !== "undefined" &&
     isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
-
+  console.log(isIOS);
   return (
     <section
       className="w-full h-[650px] relative"
@@ -30,8 +30,8 @@ const Quote: FC = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="self-center lg:self-end tracking-widest">
-            Nie przegap swojego dnia..
-            <span>{isIOS ? "." : "."}</span>
+            Nie przegap swojego dnia...
+            <span>{isIOS ? "true" : "false"}</span>
           </p>
         </div>
       </div>
