@@ -17,7 +17,7 @@ const Quote: FC = () => {
         background: "rgba(0, 0, 0, 0.50)",
         backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
-        backgroundAttachment: isIOS == true ? "scroll" : "fixed",
+        backgroundAttachment: isIOS == false ? "fixed" : "true",
         backgroundSize: "cover",
       }}
     >
@@ -34,8 +34,8 @@ const Quote: FC = () => {
         <div className="flex flex-col justify-center">
           <p className="self-center lg:self-end tracking-widest">
             Nie przegap swojego dnia...
-            {/* <span className="text-transparent">{isIOS ? " " : "  "}</span>
-            bez tego spana psuje sie na iOs (nie wiadomo dlaczego....) */}
+            <span className="text-transparent">{isIOS ? " " : "  "}</span>
+            {/* bez tego spana psuje sie na iOs (nie wiadomo dlaczego....) */}
           </p>
         </div>
       </div>
