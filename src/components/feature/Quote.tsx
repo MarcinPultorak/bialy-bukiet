@@ -1,15 +1,13 @@
 import { FC } from "react";
-import { useWindowHeight } from "@react-hook/window-size";
+import Image from "next/image";
 
 const Quote: FC = () => {
-  const windowHeight = useWindowHeight();
-
   return (
     <section
-      className="w-full h-[650px] relative "
+      className="w-full h-[650px] relative"
       style={{
         background: "rgba(0, 0, 0, 0.50)",
-        backgroundImage: "url(/images/cytat.jpg)",
+        backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",

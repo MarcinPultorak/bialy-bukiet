@@ -36,7 +36,7 @@ const Offer: FC = () => {
           <div className="w-full h-[400px] lg:h-[635px] relative ">
             <div className="h-full w-full border-yellow-700 border -ml-2 -mt-2 absolute" />
             <Image
-              src={"/images/oferta1.jpg"}
+              src={"/images/oferta10.jpg"}
               alt="oferta1"
               fill
               className="object-cover"
@@ -64,7 +64,6 @@ const Offer: FC = () => {
                 realizacji dnia ślubu od początku do końca, od A do Z.
               </p>
               <ul className="mt-4">
-                <li>- pomoc przy wyborze obiektu</li>
                 <li>
                   - pomoc przy wyborze podwykonawców, tj: oprawa muzyczna,
                   catering, dobór menu, foto/wideo, dekoracje, słodki stół, make
@@ -124,7 +123,7 @@ const Offer: FC = () => {
           <div className="w-full h-[400px] lg:h-[635px] relative lg:order-1">
             <div className="h-full w-full border-yellow-700 border -mt-2 ml-2 absolute" />
             <Image
-              src={"/images/oferta2.jpg"}
+              src={"/images/oferta20.jpg"}
               alt="oferta2"
               fill
               className="object-cover"
@@ -135,7 +134,7 @@ const Offer: FC = () => {
           <div className="w-full h-[400px] lg:h-[635px] relative">
             <div className="h-full w-full border-yellow-700 border -ml-2 -mt-2 absolute" />
             <Image
-              src={"/images/oferta3.jpg"}
+              src={"/images/oferta30.jpg"}
               alt="oferta3"
               fill
               className="object-cover"
@@ -154,7 +153,7 @@ const Offer: FC = () => {
               <p>
                 W przypadku kiedy macie już zorganizowany cały ślub i wesele,
                 jednak zależy Wam, aby ktoś nad Wami czuwał tego dnia, nie chcąc
-                obarczać tym swoich bliskich, pomoc Wedding plannera będzie
+                obarczać tym swoich bliskich, pomoc Wedding Plannera będzie
                 doskonałym wyjściem. To jest jeden z najważniejszych dni w życiu
                 i warto go celebrować z najbliższymi, nie tracąc czasu na
                 samodzielne załatwianie spraw tego dnia.
@@ -229,7 +228,7 @@ const Offer: FC = () => {
           <div className="w-full h-[400px] lg:h-[635px] relative lg:order-1">
             <div className="h-full w-full border-yellow-700 border -mt-2 ml-2 absolute" />
             <Image
-              src={"/images/oferta4.jpg"}
+              src={"/images/oferta40.jpg"}
               alt="oferta4"
               fill
               className="object-cover"
