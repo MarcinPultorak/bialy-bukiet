@@ -2,9 +2,13 @@ import { FC } from "react";
 import isMobile from "is-mobile";
 
 const Quote: FC = () => {
+  // const isIOS =
+  //   typeof window !== "undefined" &&
+  //   isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
   const isIOS =
     typeof window !== "undefined" &&
-    isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   console.log(isIOS);
   return (
     <section
@@ -30,8 +34,8 @@ const Quote: FC = () => {
         <div className="flex flex-col justify-center">
           <p className="self-center lg:self-end tracking-widest">
             Nie przegap swojego dnia...
-            <span className="text-transparent">{isIOS ? " " : "  "}</span>
-            {/* bez tego spana psuje sie na iOs (nie wiadomo dlaczego....) */}
+            {/* <span className="text-transparent">{isIOS ? " " : "  "}</span>
+            bez tego spana psuje sie na iOs (nie wiadomo dlaczego....) */}
           </p>
         </div>
       </div>
