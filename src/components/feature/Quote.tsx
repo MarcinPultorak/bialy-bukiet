@@ -2,9 +2,13 @@ import { FC } from "react";
 import isMobile from "is-mobile";
 
 const Quote: FC = () => {
+  // const isIOS =
+  //   typeof window !== "undefined" &&
+  //   isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
   const isIOS =
     typeof window !== "undefined" &&
-    isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   console.log(isIOS);
   return (
     <section
@@ -13,7 +17,7 @@ const Quote: FC = () => {
         background: "rgba(0, 0, 0, 0.50)",
         backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
-        backgroundAttachment: isIOS == true ? "scroll" : "fixed",
+        backgroundAttachment: isIOS == false ? "fixed" : "true",
         backgroundSize: "cover",
       }}
     >
