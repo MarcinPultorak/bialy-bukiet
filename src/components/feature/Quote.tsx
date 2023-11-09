@@ -31,7 +31,7 @@ const Quote: FC = () => {
         <div className="flex flex-col justify-center">
           <p className="self-center lg:self-end tracking-widest">
             Nie przegap swojego dnia...
-            <span>{isIOS ? "." : ""}</span>
+            <span className="text-transparent">{isIOS ? " " : "  "}</span>
           </p>
         </div>
       </div>
