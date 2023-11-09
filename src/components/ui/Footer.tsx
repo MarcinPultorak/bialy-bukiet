@@ -47,7 +47,7 @@ const Footer: FC = () => {
               <p className="text-sm sm:text-base">Facebook</p>
               <Image
                 src={"/images/facebook.svg"}
-                alt="facebook"
+                alt="facebook-logo"
                 width={24}
                 height={24}
                 className="object-contain"
@@ -61,7 +61,7 @@ const Footer: FC = () => {
               <p className="text-sm sm:text-base">Instagram</p>
               <Image
                 src={"/images/instagram.svg"}
-                alt="instagram"
+                alt="instagram-logo"
                 width={24}
                 height={24}
                 className="object-contain"
