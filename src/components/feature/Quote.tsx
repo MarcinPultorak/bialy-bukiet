@@ -14,7 +14,7 @@ const Quote: FC = () => {
         background: "rgba(0, 0, 0, 0.50)",
         backgroundImage: "url(/images/cytat1.jpg)",
         backgroundPosition: "center",
-        backgroundAttachment: isIOS == true ? "fixed" : "scroll",
+        backgroundAttachment: isIOS == true ? "scroll" : "fixed",
         backgroundSize: "cover",
       }}
     >
