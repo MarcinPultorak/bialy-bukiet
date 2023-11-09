@@ -3,11 +3,9 @@ import Image from "next/image";
 import isMobile from "is-mobile";
 
 const Quote: FC = () => {
-  const isIOS = isMobile({
-    tablet: true,
-    featureDetect: true,
-    ua: navigator.userAgent,
-  });
+  const isIOS =
+    typeof window !== "undefined" &&
+    isMobile({ tablet: true, featureDetect: true, ua: navigator.userAgent });
   return (
     <section
       className="w-full h-[650px] relative"
