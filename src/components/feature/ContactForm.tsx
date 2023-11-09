@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "../ui/FormInput";
 import FormTextarea from "../ui/FormTextarea";
@@ -43,6 +43,18 @@ const ContactForm: FC<Props> = (props) => {
       })
       .finally(() => setIsLoading(false));
   };
+
+  useEffect(() => {
+    let resetInterval: NodeJS.Timeout;
+    if (messageStatus == "failure" || messageStatus == "success") {
+      resetInterval = setTimeout(() => {
+        setMessageStatus("none");
+      }, 5000);
+    }
+    return () => {
+      clearTimeout(resetInterval);
+    };
+  }, [messageStatus]);
 
   return (
     <form noValidate onSubmit={handleSubmit(_submit)}>
