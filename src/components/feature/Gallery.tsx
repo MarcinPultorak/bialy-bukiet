@@ -28,7 +28,6 @@ const photos: string[] = [
   "IMG_9898.jpg",
   "IMG_20230623_233624_196.jpg",
   "r1.jpg",
-  "r2.jpg",
   "WOW08989.jpg",
   "WOW09007.jpg",
   "WOW09409.jpg",
@@ -55,7 +54,6 @@ const photosLigtbox = [
   { src: "/images/gallery/IMG_9898.jpg" },
   { src: "/images/gallery/IMG_20230623_233624_196.jpg" },
   { src: "/images/gallery/r1.jpg" },
-  { src: "/images/gallery/r2.jpg" },
   { src: "/images/gallery/WOW08989.jpg" },
   { src: "/images/gallery/WOW09007.jpg" },
   { src: "/images/gallery/WOW09409.jpg" },
@@ -66,7 +64,9 @@ const photosLigtbox = [
 const Gallery: FC = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
-  const [loadedImages, setLoadedImages] = useState<string[]>(photos.slice(0, 8));
+  const [loadedImages, setLoadedImages] = useState<string[]>(
+    photos.slice(0, 8)
+  );
   let i = 1;
 
   const handleClick = () => {
@@ -79,7 +79,9 @@ const Gallery: FC = () => {
       <section className="max-w-screen-2xl mx-auto w-full h-full px-5 sm:px-10 py-10 md:py-20">
         <div className="flex items-center sm:space-x-8 w-full px-10 justify-center">
           <div className="hidden sm:block min-w-[20px] h-0.5 bg-yellow-700 w-full max-w-[150px]" />
-          <h2 className="text-xl md:text-2xl xl:text-3xl tracking-wider uppercase">Galeria zdjęć</h2>
+          <h2 className="text-xl md:text-2xl xl:text-3xl tracking-wider uppercase">
+            Galeria zdjęć
+          </h2>
           <div className="hidden sm:block min-w-[20px] h-0.5 bg-yellow-700 w-full max-w-[150px]" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-10 md:mt-20">
@@ -103,7 +105,9 @@ const Gallery: FC = () => {
         </div>
         {loadedImages.length < photos.length ? (
           <div className="max-w-max mx-auto mt-10">
-            <Button onClick={handleClick}>Załaduj więcej</Button>
+            <Button variant="beige" onClick={handleClick}>
+              Załaduj więcej
+            </Button>
           </div>
         ) : null}
 
