@@ -15,6 +15,7 @@ const config: Config = {
       red: colors.red,
       slate: colors.slate,
       black: colors.black,
+      emerald: colors.emerald,
       beige: {
         DEFAULT: "#F8F3EF",
       },

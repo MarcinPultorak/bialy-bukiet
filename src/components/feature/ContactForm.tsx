@@ -4,7 +4,11 @@ import FormInput from "../ui/FormInput";
 import FormTextarea from "../ui/FormTextarea";
 import Checkbox from "../ui/Checkbox";
 import Button from "../ui/Button";
-import { validateEmail, validatePhone, validateRequired } from "@/utils/validators";
+import {
+  validateEmail,
+  validatePhone,
+  validateRequired,
+} from "@/utils/validators";
 import { ContactFormDto } from "@/interfaces/types";
 
 type Props = {
@@ -14,6 +18,9 @@ type Props = {
 const ContactForm: FC<Props> = (props) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isFormReset, setIsFormReset] = useState<boolean>(false);
+  const [messageStatus, setMessageStatus] = useState<
+    "success" | "failure" | "none"
+  >("none");
 
   const {
     register,
@@ -29,6 +36,10 @@ const ContactForm: FC<Props> = (props) => {
       .callback(payload)
       .then(() => {
         reset();
+        setMessageStatus("success");
+      })
+      .catch(() => {
+        setMessageStatus("failure");
       })
       .finally(() => setIsLoading(false));
   };
@@ -114,10 +125,23 @@ const ContactForm: FC<Props> = (props) => {
         </div>
       </fieldset>
       <div className="md:max-w-[360px] mx-auto mt-10">
-        <Button isSubmitting={isLoading} type={"submit"} title="Wyślij wiadomość">
+        <Button
+          isSubmitting={isLoading}
+          type={"submit"}
+          title="Wyślij wiadomość"
+        >
           Wyślij wiadomość
         </Button>
       </div>
+      {messageStatus == "success" ? (
+        <p className="text-center mt-4 text-sm text-emerald-400 font-bold">
+          Twoja wiadomość została wysłana!
+        </p>
+      ) : messageStatus == "failure" ? (
+        <p className="text-center mt-4 text-sm text-red-400 font-bold">
+          Wystąpił błąd wysyłania wiadomości, spróbuj ponownie.
+        </p>
+      ) : null}
     </form>
   );
 };
